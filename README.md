@@ -1,8 +1,5 @@
-﻿# URL_SHORTNER on Node , ejs , MongoDB
-
-searching for url shortner to make long url a short url of 6 leters? or search for source code of url shortner ?
-dont worry here it is a URL shortner tool that sort url into small 6 digit letters
+# URL_SHORTNER on Node, EJS, MongoDB
+Looking for a URL shortener to turn a long URL into a short 6-letter one? Or maybe you're searching for the source code of a URL shortener? Don't worry, you've found the right place! This URL shortener tool converts long URLs into small 6-character short links.
 
 # How to use?
-
-<h5>Copy your URL ----> go to <a href="https://url-shortner-bucf.onrender.com/">https://url-shortner-bucf.onrender.com </a> ----> past your Url on input field and click on Shorten URL ----> copy your URL  </h5>
+<h5>Copy your URL ----> visit <a href="https://url-shortner-bucf.onrender.com/">https://url-shortner-bucf.onrender.com</a> ----> paste your URL in the input field and click on 'Shorten URL' ----> then copy your newly shortened URL!</h5>
