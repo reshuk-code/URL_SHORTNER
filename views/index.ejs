@@ -27,6 +27,32 @@
             opacity: 1;
             transform: translateY(0);
         }
+         /* Footer styling */
+         footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: auto; /* Push the footer to the bottom */
+            font-size: 14px;
+        }
+
+        footer a {
+            color: #4caf50;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive styling for footer text */
+        @media (max-width: 600px) {
+            footer {
+                font-size: 12px; /* Smaller text on mobile */
+                padding: 10px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -51,11 +77,15 @@
             <p><%= error %></p>
         </div>
         <% } %>
+        
+        <footer> 
+            &#169; url_shortner <script type="text/javascript">var year = new Date();document.write(year.getFullYear());</script> &#10084; Developed By <a href="https://github.com/reshuk-code" target="_blank">reshuk-code</a> &#10084;
+        </footer>
     </div>
 
     <!-- Toast notification -->
     <div id="toast" class="toast"></div>
-
-    <script src="../public/script.js"></script>
+    
+    <script src="/script.js"></script>
 </body>
 </html>
