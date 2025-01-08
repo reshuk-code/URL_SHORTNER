@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/styles.css">
+    <style>
+        /* Toast container styling */
+        .toast {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #4caf50;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            z-index: 1000;
+        }
+
+        /* Show the toast */
+        .toast.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>URL Shortener</h1>
+        <form id="urlForm" action="/url_short" method="POST">
+            <label for="url">Enter a URL to shorten:</label>
+            <input type="url" id="url" name="url" placeholder="https://example.com" required>
+            <button type="submit">Shorten URL</button>
+        </form>
+
+        <% if (shortUrl) { %>
+        <div class="result">
+            <h2>Shortened URL:</h2>
+            <a href="<%= shortUrl %>" target="_blank" id="sort_link"><%= shortUrl %></a>
+            <input type="button" onclick="copyOnClick()" value="&#10063;" id="copy" />
+        </div>
+        <% } %>
+
+        <% if (error) { %>
+        <div class="error">
+            <p><%= error %></p>
+        </div>
+        <% } %>
+    </div>
+
+    <!-- Toast notification -->
+    <div id="toast" class="toast"></div>
+
+    <script src="../public/script.js"></script>
+</body>
+</html>
